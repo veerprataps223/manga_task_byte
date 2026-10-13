@@ -1,15 +1,18 @@
 Manga Dialogue Extraction and Speaker Attribution
 
+NOTE: this readme is not ai generated. AI is used for assistance like for a better grammar and better explanation of the pipeline, flowchart generated is by AI.
+I request you to also have a look towards the main "README.md" which covers everything in detail. but is ai generated with help and corrections from me.
+
 Approach:
 
 We process 3 consecutive manga pages to extract story dialogue in visual reading order and attribute speakers consistently across all 3 pages.
 
 The pipeline runs in 5 stages:
 1) OCR: Florence-2 Large extracts text and bounding coordinates, replacing EasyOCR which failed on stylized comic lettering.
-2) Spatial NMS: Merges overlapping text candidate boxes (IoU > 0.45) to eliminate duplicate line emissions.
-3) Noise and Story Filtering: A trained Gradient Boosting classifier (16 layout and lexical features) removes sound effects, Japanese margin watermarks, and scanlator notes.
-4) Reading Order: A trained pairwise ranking model orders speech bubbles based on vertical tiers and right-to-left layout weights (dy = +10.03, dx = -1.57).
-5) Speaker Attribution: A lexical narrator classifier separates story text from narration, and spatial clustering groups dialogue into character turns across the 3-page sequence.
+2) Spatial NMS: There can be multiple duplications in the final output. This makes sure to remove those duplications and keep the output unique.
+3) Noise and Story Filtering: A trained Gradient Boosting classifier removes sound effects, Japanese margin watermarks etc.
+4) Reading Order: A trained pairwise ranking model orders speech bubbles because mangas are mainly read right to left, top to bottom, this makes sure everything is in consecutive order, not breaking the flow of speech
+5) Speaker Attribution: This separates story text from narration, and spatial clustering groups dialogue into character turns across the 3-page sequence.
 
 ![Pipeline Architecture Flowchart](./assets/pipeline_flowchart.png)
 
@@ -51,8 +54,8 @@ Balanced Joint F1: 0.2538
 Latency per page: 1240 ms on GPU
 
 Why the primary submission uses the CPU pipeline:
-1) The official metric heavily penalizes unmapped predicted characters (extra_speakers in the denominator). Vision embeddings occasionally split character clusters, dropping Balanced F1 from 0.3151 to 0.2538.
-2) The primary pipeline is 15x faster and runs on CPU with zero GPU memory needed during inference.
+
+- The primary pipeline is 15x faster and runs on CPU with zero GPU memory needed during inference. It does run GPU during initial florence stage, to map out bounding boxes.
 
 
 Time and Latency Benchmark (15 test sequences / 45 pages):
@@ -66,6 +69,7 @@ Speedup: Direction A is 15.2x faster.
 Direction A (Florence-2 OCR + CPU pipeline): ~93.7 s total (~2.08 s per page)
 5-Model pipeline (Florence-2 OCR + SAM 2 + CLIP): ~145.9 s total (~3.24 s per page)
 
+as you can see from above data , the total time taken by florence 2 ocr + cpu is roughly 36% lesser than 5 model pipeline.
 
 Trained Weights and Open-Source Models:
 
@@ -80,17 +84,16 @@ What Worked vs What Failed:
 
 What worked:
 
-1) Foundation model OCR: Florence-2 jumped token coverage from 57% to 83%, fixing broken all-caps comic fonts.
-2) Spatial NMS: Pruning high-overlap text quads stopped repeated dialogue lines.
-3) Pairwise ranking: Learning vertical tier and RTL weights beat rigid box heuristics on borderless panels.
-4) SAM 2 tail vectors: Tracing balloon tails to characters raised raw speaker accuracy from 54% to 61%.
+1) Foundation model OCR: Florence-2 jumped token coverage from 57% to 83%, fixing broken all-caps comic fonts.(No prior fine-tuning done on florence 2)
+2) Spatial NMS: Pruning high-overlap text quads stopped repeated dialogue lines.(Used for removing duplications in final output, i tested this with sequence 1 and 3, 6 pages, every error was avoided)
+3) Pairwise ranking: Making sure order of the narratives is being followed
+4) SAM 2 tail vectors: Tracing balloon tails to characters raised raw speaker accuracy from 54% to 61%. This makes sure that narrator speaking is accurately chosen(we didnt use this in our final submission)
 5) Pronoun rules: Disqualifying bubbles with I, me, you from narration stopped false narration tags.
 
 What failed:
 
-1) Morphological gutter splitting: Thresholding and contour slicing broke on diagonal gutters and art breaking across borders.
-2) Simple aspect-ratio narration rules: Wide boxes at page edges falsely caught Japanese publisher logos and chapter titles.
-3) Distance-threshold clustering on raw crops: Inventing extra character clusters crushed Hungarian Balanced F1.
+1) Simple aspect-ratio narration rules: Wide boxes at page edges falsely caught Japanese publisher logos and chapter titles.
+2) Distance-threshold clustering on raw crops: Inventing extra character clusters crushed Hungarian Balanced F1.
 
 
 What I Would Try Next
@@ -99,6 +102,15 @@ What I Would Try Next
 2) Use an anime face detector with ray-casting along the SAM 2 tail vector to snap directly to character face boxes.
 3) Add a lightweight dialogue language model prior to enforce realistic turn-taking alternation between speakers.
 
+why we didnt choose 5 model pipeline:
+
+Our priority with this project was to get as much accuracy as we get with efficiency as well.
+We prioritised saving time and gpu inference over ~7% extra accurracy.
+because that would add roughly 37% extra time, and most of the added overhead is gpu.
+On large scale that can create a difference of more than double in $.
+So efficiency(lightweightness) > accuracy(~7%)
+
+We did include benchmarks in README_DETAILED.md
 
 How to Run
 
@@ -113,3 +125,6 @@ python src/predict_test.py --output predictions.jsonl
 
 4) View the head of the output:
 python show_head.py
+
+NOTE: 
+All the tests were run on RTX 4060(8GB VRAM), i7-13620h, 16gb ram.
