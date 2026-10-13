@@ -1,0 +1,444 @@
+{
+  "version": "2.1",
+  "pages_per_sequence": 3,
+  "macro": {
+    "text_order_score": 0.7587969087934855,
+    "balanced_joint_f1": 0.2370402483877463,
+    "speaker_accuracy_on_matched": 0.5935101967377427,
+    "joint_f1": 0.46709766611779335,
+    "matched_token_coverage": 0.8282803369023338
+  },
+  "missing_sequences": [],
+  "sequences": {
+    "seq_ee880b9612205860": {
+      "text_order_score": 0.8430869860686374,
+      "active_text_pages": 3,
+      "balanced_joint_f1": 0.14152845528455293,
+      "balanced_speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character3"
+      },
+      "speaker_accuracy_on_matched": 0.37070151306740035,
+      "joint_f1": 0.322272047832586,
+      "matched_token_coverage": 0.8812121212121211,
+      "gold_tokens": 220,
+      "predicted_tokens": 228,
+      "scored_gold_speaker_tokens": 218,
+      "scored_predicted_speaker_tokens": 228,
+      "matched_scored_token_weight": 193.86666666666665,
+      "correct_speaker_token_weight": 71.86666666666667,
+      "speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character3"
+      },
+      "page_text_scores": {
+        "1": 0.8049999999999999,
+        "2": 0.9444444444444444,
+        "3": 0.7798165137614679
+      },
+      "missing_sequence": false
+    },
+    "seq_d8afceb0e8f9122d": {
+      "text_order_score": 0.7883268536808381,
+      "active_text_pages": 3,
+      "balanced_joint_f1": 0.19575991189427291,
+      "balanced_speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character2"
+      },
+      "speaker_accuracy_on_matched": 0.8248259860788864,
+      "joint_f1": 0.7081673306772909,
+      "matched_token_coverage": 0.8065068493150684,
+      "gold_tokens": 146,
+      "predicted_tokens": 136,
+      "scored_gold_speaker_tokens": 125,
+      "scored_predicted_speaker_tokens": 126,
+      "matched_scored_token_weight": 107.75,
+      "correct_speaker_token_weight": 88.875,
+      "speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character2"
+      },
+      "page_text_scores": {
+        "1": 0.7216494845360825,
+        "2": 0.9004739336492891,
+        "3": 0.7428571428571429
+      },
+      "missing_sequence": false
+    },
+    "seq_96839890d69d7698": {
+      "text_order_score": 0.8712617122320626,
+      "active_text_pages": 3,
+      "balanced_joint_f1": 0.28793381759483455,
+      "balanced_speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character2": "character1",
+        "character1": "character3"
+      },
+      "speaker_accuracy_on_matched": 0.43333333333333335,
+      "joint_f1": 0.416,
+      "matched_token_coverage": 0.9846153846153847,
+      "gold_tokens": 65,
+      "predicted_tokens": 68,
+      "scored_gold_speaker_tokens": 61,
+      "scored_predicted_speaker_tokens": 64,
+      "matched_scored_token_weight": 60.0,
+      "correct_speaker_token_weight": 26.0,
+      "speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1"
+      },
+      "page_text_scores": {
+        "1": 1.0,
+        "2": 0.6326530612244898,
+        "3": 0.9811320754716981
+      },
+      "missing_sequence": false
+    },
+    "seq_d8bc3c6ac1bb6017": {
+      "text_order_score": 0.6884084749938407,
+      "active_text_pages": 3,
+      "balanced_joint_f1": 0.2801587301587298,
+      "balanced_speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character2": "character1"
+      },
+      "speaker_accuracy_on_matched": 0.7247772694437755,
+      "joint_f1": 0.6231884057971013,
+      "matched_token_coverage": 0.8828656462585034,
+      "gold_tokens": 56,
+      "predicted_tokens": 59,
+      "scored_gold_speaker_tokens": 56,
+      "scored_predicted_speaker_tokens": 59,
+      "matched_scored_token_weight": 49.44047619047619,
+      "correct_speaker_token_weight": 35.83333333333333,
+      "speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character2": "character1"
+      },
+      "page_text_scores": {
+        "1": 0.5121951219512195,
+        "2": 0.9166666666666666,
+        "3": 0.6363636363636364
+      },
+      "missing_sequence": false
+    },
+    "seq_0ef2ec294597f572": {
+      "text_order_score": 0.6656603382093578,
+      "active_text_pages": 3,
+      "balanced_joint_f1": 0.15458937198067635,
+      "balanced_speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1"
+      },
+      "speaker_accuracy_on_matched": 0.5577342047930284,
+      "joint_f1": 0.4429065743944637,
+      "matched_token_coverage": 0.796875,
+      "gold_tokens": 144,
+      "predicted_tokens": 145,
+      "scored_gold_speaker_tokens": 144,
+      "scored_predicted_speaker_tokens": 145,
+      "matched_scored_token_weight": 114.75,
+      "correct_speaker_token_weight": 64.0,
+      "speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1"
+      },
+      "page_text_scores": {
+        "1": 0.7703703703703704,
+        "2": 0.4647058823529412,
+        "3": 0.7619047619047619
+      },
+      "missing_sequence": false
+    },
+    "seq_eaad741293da2ac1": {
+      "text_order_score": 0.8439468333085355,
+      "active_text_pages": 3,
+      "balanced_joint_f1": 0.1613378023899739,
+      "balanced_speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1",
+        "character2": "character2"
+      },
+      "speaker_accuracy_on_matched": 0.4963559421652757,
+      "joint_f1": 0.41642011834319526,
+      "matched_token_coverage": 0.8439484126984127,
+      "gold_tokens": 168,
+      "predicted_tokens": 170,
+      "scored_gold_speaker_tokens": 168,
+      "scored_predicted_speaker_tokens": 170,
+      "matched_scored_token_weight": 141.78333333333333,
+      "correct_speaker_token_weight": 70.375,
+      "speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1",
+        "character2": "character2"
+      },
+      "page_text_scores": {
+        "1": 0.676595744680851,
+        "2": 0.9090909090909091,
+        "3": 0.9461538461538461
+      },
+      "missing_sequence": false
+    },
+    "seq_fc4c2b84b6ec32ff": {
+      "text_order_score": 0.8008723664452443,
+      "active_text_pages": 3,
+      "balanced_joint_f1": 0.2306075793546121,
+      "balanced_speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1",
+        "character2": "character2"
+      },
+      "speaker_accuracy_on_matched": 0.5803921568627451,
+      "joint_f1": 0.467109634551495,
+      "matched_token_coverage": 0.7764423076923076,
+      "gold_tokens": 156,
+      "predicted_tokens": 145,
+      "scored_gold_speaker_tokens": 156,
+      "scored_predicted_speaker_tokens": 145,
+      "matched_scored_token_weight": 121.12499999999999,
+      "correct_speaker_token_weight": 70.3,
+      "speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1",
+        "character2": "character2"
+      },
+      "page_text_scores": {
+        "1": 0.8435754189944134,
+        "2": 0.631768953068592,
+        "3": 0.9272727272727272
+      },
+      "missing_sequence": false
+    },
+    "seq_cd727990f22c777b": {
+      "text_order_score": 0.5289135728640899,
+      "active_text_pages": 3,
+      "balanced_joint_f1": 0.10028878648233494,
+      "balanced_speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1"
+      },
+      "speaker_accuracy_on_matched": 0.5952227557284387,
+      "joint_f1": 0.3606673295768424,
+      "matched_token_coverage": 0.6025077389185273,
+      "gold_tokens": 241,
+      "predicted_tokens": 228,
+      "scored_gold_speaker_tokens": 218,
+      "scored_predicted_speaker_tokens": 213,
+      "matched_scored_token_weight": 130.57936507936506,
+      "correct_speaker_token_weight": 77.72380952380954,
+      "speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1"
+      },
+      "page_text_scores": {
+        "1": 0.5882352941176471,
+        "2": 0.4944237918215614,
+        "3": 0.5040816326530613
+      },
+      "missing_sequence": false
+    },
+    "seq_ec05f45d71c43f2c": {
+      "text_order_score": 0.7089409170553407,
+      "active_text_pages": 3,
+      "balanced_joint_f1": 0.14432315064390536,
+      "balanced_speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1"
+      },
+      "speaker_accuracy_on_matched": 0.6212260490710855,
+      "joint_f1": 0.48032194562806807,
+      "matched_token_coverage": 0.7867701432397918,
+      "gold_tokens": 313,
+      "predicted_tokens": 324,
+      "scored_gold_speaker_tokens": 313,
+      "scored_predicted_speaker_tokens": 324,
+      "matched_scored_token_weight": 246.25905483405484,
+      "correct_speaker_token_weight": 152.98253968253968,
+      "speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1"
+      },
+      "page_text_scores": {
+        "1": 0.5275735294117647,
+        "2": 0.9015748031496063,
+        "3": 0.6976744186046512
+      },
+      "missing_sequence": false
+    },
+    "seq_de542b63e6b19bc2": {
+      "text_order_score": 0.8004077192169846,
+      "active_text_pages": 3,
+      "balanced_joint_f1": 0.3743764172335603,
+      "balanced_speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1",
+        "character2": "character2"
+      },
+      "speaker_accuracy_on_matched": 0.5039080114234181,
+      "joint_f1": 0.3991071428571429,
+      "matched_token_coverage": 0.8924211938296445,
+      "gold_tokens": 71,
+      "predicted_tokens": 89,
+      "scored_gold_speaker_tokens": 71,
+      "scored_predicted_speaker_tokens": 89,
+      "matched_scored_token_weight": 63.36190476190475,
+      "correct_speaker_token_weight": 31.92857142857143,
+      "speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character2"
+      },
+      "page_text_scores": {
+        "1": 0.7603305785123967,
+        "2": 0.8536585365853658,
+        "3": 0.7872340425531915
+      },
+      "missing_sequence": false
+    },
+    "seq_84541a1f4b159018": {
+      "text_order_score": 0.7484897326745896,
+      "active_text_pages": 3,
+      "balanced_joint_f1": 0.11991274226080832,
+      "balanced_speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1"
+      },
+      "speaker_accuracy_on_matched": 0.555603412371574,
+      "joint_f1": 0.4637650929317596,
+      "matched_token_coverage": 0.8492218771566598,
+      "gold_tokens": 230,
+      "predicted_tokens": 238,
+      "scored_gold_speaker_tokens": 230,
+      "scored_predicted_speaker_tokens": 238,
+      "matched_scored_token_weight": 195.32103174603174,
+      "correct_speaker_token_weight": 108.52103174603175,
+      "speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1"
+      },
+      "page_text_scores": {
+        "1": 0.7641196013289037,
+        "2": 0.6989966555183946,
+        "3": 0.7823529411764706
+      },
+      "missing_sequence": false
+    },
+    "seq_4833e23eec54344b": {
+      "text_order_score": 0.7224209944914511,
+      "active_text_pages": 3,
+      "balanced_joint_f1": 0.10263123120265963,
+      "balanced_speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character2": "character2"
+      },
+      "speaker_accuracy_on_matched": 0.460335651682431,
+      "joint_f1": 0.3803392685745627,
+      "matched_token_coverage": 0.8242821341412891,
+      "gold_tokens": 213,
+      "predicted_tokens": 212,
+      "scored_gold_speaker_tokens": 213,
+      "scored_predicted_speaker_tokens": 212,
+      "matched_scored_token_weight": 175.57209457209458,
+      "correct_speaker_token_weight": 80.82209457209457,
+      "speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character2": "character2"
+      },
+      "page_text_scores": {
+        "1": 0.5606060606060606,
+        "2": 0.719438877755511,
+        "3": 0.887218045112782
+      },
+      "missing_sequence": false
+    },
+    "seq_c4448514b6de1ab9": {
+      "text_order_score": 0.6938159879336351,
+      "active_text_pages": 3,
+      "balanced_joint_f1": 0.5971917507678804,
+      "balanced_speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1",
+        "character2": "character2"
+      },
+      "speaker_accuracy_on_matched": 1.0,
+      "joint_f1": 0.5625,
+      "matched_token_coverage": 0.9,
+      "gold_tokens": 30,
+      "predicted_tokens": 66,
+      "scored_gold_speaker_tokens": 30,
+      "scored_predicted_speaker_tokens": 66,
+      "matched_scored_token_weight": 27.0,
+      "correct_speaker_token_weight": 27.0,
+      "speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1",
+        "character2": "character2"
+      },
+      "page_text_scores": {
+        "1": 0.8461538461538461,
+        "2": 1.0,
+        "3": 0.23529411764705888
+      },
+      "missing_sequence": false
+    },
+    "seq_07838fb26cd1be54": {
+      "text_order_score": 0.9179177178827468,
+      "active_text_pages": 3,
+      "balanced_joint_f1": 0.4835766423357661,
+      "balanced_speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1",
+        "character2": "character2"
+      },
+      "speaker_accuracy_on_matched": 0.5784023668639052,
+      "joint_f1": 0.5292724196277495,
+      "matched_token_coverage": 0.9013333333333334,
+      "gold_tokens": 100,
+      "predicted_tokens": 97,
+      "scored_gold_speaker_tokens": 100,
+      "scored_predicted_speaker_tokens": 97,
+      "matched_scored_token_weight": 90.13333333333334,
+      "correct_speaker_token_weight": 52.133333333333326,
+      "speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1",
+        "character2": "character2"
+      },
+      "page_text_scores": {
+        "1": 0.9210526315789473,
+        "2": 0.9489795918367347,
+        "3": 0.8837209302325582
+      },
+      "missing_sequence": false
+    },
+    "seq_58858a2227cf3761": {
+      "text_order_score": 0.7594834248449321,
+      "active_text_pages": 3,
+      "balanced_joint_f1": 0.1813873362316268,
+      "balanced_speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1"
+      },
+      "speaker_accuracy_on_matched": 0.5998342981808427,
+      "joint_f1": 0.43442768097464224,
+      "matched_token_coverage": 0.6952029111239637,
+      "gold_tokens": 190,
+      "predicted_tokens": 181,
+      "scored_gold_speaker_tokens": 182,
+      "scored_predicted_speaker_tokens": 180,
+      "matched_scored_token_weight": 131.0885531135531,
+      "correct_speaker_token_weight": 78.63141025641025,
+      "speaker_mapping": {
+        "NARRATION": "NARRATION",
+        "character1": "character1"
+      },
+      "page_text_scores": {
+        "1": 0.7400722021660651,
+        "2": 0.5809312638580931,
+        "3": 0.9574468085106383
+      },
+      "missing_sequence": false
+    }
+  }
+}

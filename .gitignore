@@ -1,0 +1,13 @@
+# Exclude raw image dataset as requested
+BYTE ML Task Data/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

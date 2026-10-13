@@ -1,0 +1,137 @@
+[
+  {
+    "sequence_id": "seq_ec05f45d71c43f2c",
+    "split": "development",
+    "images": [
+      "development/images/seq_ec05f45d71c43f2c/01.png",
+      "development/images/seq_ec05f45d71c43f2c/02.png",
+      "development/images/seq_ec05f45d71c43f2c/03.png"
+    ]
+  },
+  {
+    "sequence_id": "seq_07838fb26cd1be54",
+    "split": "development",
+    "images": [
+      "development/images/seq_07838fb26cd1be54/01.png",
+      "development/images/seq_07838fb26cd1be54/02.png",
+      "development/images/seq_07838fb26cd1be54/03.png"
+    ]
+  },
+  {
+    "sequence_id": "seq_96839890d69d7698",
+    "split": "development",
+    "images": [
+      "development/images/seq_96839890d69d7698/01.png",
+      "development/images/seq_96839890d69d7698/02.png",
+      "development/images/seq_96839890d69d7698/03.png"
+    ]
+  },
+  {
+    "sequence_id": "seq_de542b63e6b19bc2",
+    "split": "development",
+    "images": [
+      "development/images/seq_de542b63e6b19bc2/01.png",
+      "development/images/seq_de542b63e6b19bc2/02.png",
+      "development/images/seq_de542b63e6b19bc2/03.png"
+    ]
+  },
+  {
+    "sequence_id": "seq_d8bc3c6ac1bb6017",
+    "split": "development",
+    "images": [
+      "development/images/seq_d8bc3c6ac1bb6017/01.png",
+      "development/images/seq_d8bc3c6ac1bb6017/02.png",
+      "development/images/seq_d8bc3c6ac1bb6017/03.png"
+    ]
+  },
+  {
+    "sequence_id": "seq_84541a1f4b159018",
+    "split": "development",
+    "images": [
+      "development/images/seq_84541a1f4b159018/01.png",
+      "development/images/seq_84541a1f4b159018/02.png",
+      "development/images/seq_84541a1f4b159018/03.png"
+    ]
+  },
+  {
+    "sequence_id": "seq_ee880b9612205860",
+    "split": "development",
+    "images": [
+      "development/images/seq_ee880b9612205860/01.png",
+      "development/images/seq_ee880b9612205860/02.png",
+      "development/images/seq_ee880b9612205860/03.png"
+    ]
+  },
+  {
+    "sequence_id": "seq_cd727990f22c777b",
+    "split": "development",
+    "images": [
+      "development/images/seq_cd727990f22c777b/01.png",
+      "development/images/seq_cd727990f22c777b/02.png",
+      "development/images/seq_cd727990f22c777b/03.png"
+    ]
+  },
+  {
+    "sequence_id": "seq_4833e23eec54344b",
+    "split": "development",
+    "images": [
+      "development/images/seq_4833e23eec54344b/01.png",
+      "development/images/seq_4833e23eec54344b/02.png",
+      "development/images/seq_4833e23eec54344b/03.png"
+    ]
+  },
+  {
+    "sequence_id": "seq_eaad741293da2ac1",
+    "split": "development",
+    "images": [
+      "development/images/seq_eaad741293da2ac1/01.png",
+      "development/images/seq_eaad741293da2ac1/02.png",
+      "development/images/seq_eaad741293da2ac1/03.png"
+    ]
+  },
+  {
+    "sequence_id": "seq_d8afceb0e8f9122d",
+    "split": "development",
+    "images": [
+      "development/images/seq_d8afceb0e8f9122d/01.png",
+      "development/images/seq_d8afceb0e8f9122d/02.png",
+      "development/images/seq_d8afceb0e8f9122d/03.png"
+    ]
+  },
+  {
+    "sequence_id": "seq_58858a2227cf3761",
+    "split": "development",
+    "images": [
+      "development/images/seq_58858a2227cf3761/01.png",
+      "development/images/seq_58858a2227cf3761/02.png",
+      "development/images/seq_58858a2227cf3761/03.png"
+    ]
+  },
+  {
+    "sequence_id": "seq_c4448514b6de1ab9",
+    "split": "development",
+    "images": [
+      "development/images/seq_c4448514b6de1ab9/01.png",
+      "development/images/seq_c4448514b6de1ab9/02.png",
+      "development/images/seq_c4448514b6de1ab9/03.png"
+    ]
+  },
+  {
+    "sequence_id": "seq_0ef2ec294597f572",
+    "split": "development",
+    "images": [
+      "development/images/seq_0ef2ec294597f572/01.png",
+      "development/images/seq_0ef2ec294597f572/02.png",
+      "development/images/seq_0ef2ec294597f572/03.png"
+    ]
+  },
+  {
+    "sequence_id": "seq_fc4c2b84b6ec32ff",
+    "split": "development",
+    "images": [
+      "development/images/seq_fc4c2b84b6ec32ff/01.png",
+      "development/images/seq_fc4c2b84b6ec32ff/02.png",
+      "development/images/seq_fc4c2b84b6ec32ff/03.png"
+    ]
+  }
+]
