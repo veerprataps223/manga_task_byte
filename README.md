@@ -1,6 +1,6 @@
 Manga Dialogue Extraction and Speaker Attribution
 
-1) Approach
+Approach:
 
 We process 3 consecutive manga pages to extract story dialogue in visual reading order and attribute speakers consistently across all 3 pages.
 
@@ -14,9 +14,9 @@ The pipeline runs in 5 stages:
 ![Pipeline Architecture Flowchart](./assets/pipeline_flowchart.png)
 
 
-2) Experiments and Results
+Experiments and Results:
 
-Evaluated on the 15 validation sequences using the official score.py benchmark:
+Evaluated on the "15" validation sequences using the official score.py benchmark:
 
 Baseline (EasyOCR + heuristic):
 Token Coverage: 57.2%
@@ -55,9 +55,10 @@ Why the primary submission uses the CPU pipeline:
 2) The primary pipeline is 15x faster and runs on CPU with zero GPU memory needed during inference.
 
 
-3) What Worked vs What Failed
+What Worked vs What Failed:
 
 What worked:
+
 1) Foundation model OCR: Florence-2 jumped token coverage from 57% to 83%, fixing broken all-caps comic fonts.
 2) Spatial NMS: Pruning high-overlap text quads stopped repeated dialogue lines.
 3) Pairwise ranking: Learning vertical tier and RTL weights beat rigid box heuristics on borderless panels.
@@ -65,19 +66,20 @@ What worked:
 5) Pronoun rules: Disqualifying bubbles with I, me, you from narration stopped false narration tags.
 
 What failed:
+
 1) Morphological gutter splitting: Thresholding and contour slicing broke on diagonal gutters and art breaking across borders.
 2) Simple aspect-ratio narration rules: Wide boxes at page edges falsely caught Japanese publisher logos and chapter titles.
 3) Distance-threshold clustering on raw crops: Inventing extra character clusters crushed Hungarian Balanced F1.
 
 
-4) What I Would Try Next
+What I Would Try Next
 
 1) Fine-tune Qwen2.5-VL end-to-end to predict OCR, reading order, and speaker tags directly in one pass.
 2) Use an anime face detector with ray-casting along the SAM 2 tail vector to snap directly to character face boxes.
 3) Add a lightweight dialogue language model prior to enforce realistic turn-taking alternation between speakers.
 
 
-5) How to Run
+How to Run
 
 1) Install dependencies:
 pip install -r requirements.txt
