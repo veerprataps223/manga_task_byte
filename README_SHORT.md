@@ -55,6 +55,27 @@ Why the primary submission uses the CPU pipeline:
 2) The primary pipeline is 15x faster and runs on CPU with zero GPU memory needed during inference.
 
 
+Time and Latency Benchmark (15 test sequences / 45 pages):
+
+1) Post-OCR inference time (predict_test.py):
+Direction A (Primary CPU pipeline): 3.69 s total (82 ms per page, 246 ms per sequence, 0 MB GPU VRAM)
+5-Model pipeline (SAM 2 + CLIP GPU): 55.92 s total (1240 ms per page, 3728 ms per sequence, ~2.8 GB GPU VRAM)
+Speedup: Direction A is 15.2x faster.
+
+2) End-to-end time from raw images:
+Direction A (Florence-2 OCR + CPU pipeline): ~93.7 s total (~2.08 s per page)
+5-Model pipeline (Florence-2 OCR + SAM 2 + CLIP): ~145.9 s total (~3.24 s per page)
+
+
+Trained Weights and Open-Source Models:
+
+1) Story Filter Classifier: models/story_filter.pkl (Trained GBDT model, 97.7% CV F1, included in repository)
+2) Reading Order Sorter: models/reading_order_sorter.pkl (Trained Pairwise Ranking model, 95.8% CV Accuracy, included in repository)
+3) Microsoft Florence-2 Large: https://huggingface.co/microsoft/Florence-2-large (Open weights, 770M params)
+4) Meta SAM 2 Hiera Tiny: https://huggingface.co/facebook/sam2-hiera-tiny (Open weights, 38.9M params)
+5) OpenAI CLIP ViT-B/32: https://huggingface.co/openai/clip-vit-base-patch32 (Open weights, 87.8M params)
+
+
 What Worked vs What Failed:
 
 What worked:

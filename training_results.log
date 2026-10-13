@@ -1,0 +1,48 @@
+Building dataset from cached sequences and labels...
+Generated 295 filter samples (positives=279, negatives=16)
+Generated 2046 pairwise ranking samples
+
+==================================================
+TRAINING MODEL 1: Learned Story Filter Classifier
+==================================================
+Filter 5-fold CV F1: 0.9772 (+/- 0.0017)
+
+Filter Training Set Report:
+                precision    recall  f1-score   support
+
+     Noise/SFX       1.00      1.00      1.00        16
+Story Dialogue       1.00      1.00      1.00       279
+
+      accuracy                           1.00       295
+     macro avg       1.00      1.00      1.00       295
+  weighted avg       1.00      1.00      1.00       295
+
+Saved Filter model to models\story_filter.pkl
+
+==================================================
+TRAINING MODEL 2: Learned Pairwise Reading Order Sorter
+==================================================
+Sorter 5-fold CV Accuracy: 0.9580 (+/- 0.0249)
+
+Sorter Training Set Report:
+              precision    recall  f1-score   support
+
+  B before A       0.96      0.96      0.96      1023
+  A before B       0.96      0.96      0.96      1023
+
+    accuracy                           0.96      2046
+   macro avg       0.96      0.96      0.96      2046
+weighted avg       0.96      0.96      0.96      2046
+
+Learned Feature Weights for Manga Reading Order:
+  dy (B_y - A_y)        : +10.0312
+  dx (B_x - A_x)        : -1.5675
+  abs(dy)               : +0.0006
+  abs(dx)               : +0.0016
+  overlap_y             : +0.0012
+  overlap_x             : +0.0056
+  is_same_row           : +0.0013
+  is_same_col           : -0.0053
+  right_before_left     : +1.5762
+  top_before_bottom     : +1.2080
+Saved Sorter model to models\reading_order_sorter.pkl
